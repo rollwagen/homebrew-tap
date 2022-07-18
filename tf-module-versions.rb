@@ -5,21 +5,21 @@
 class TfModuleVersions < Formula
   desc ""
   homepage ""
-  version "0.0.6"
+  version "0.0.7"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rollwagen/tf-module-versions/releases/download/v0.0.6/tf-module-versions_0.0.6_darwin_arm64.tar.gz"
-      sha256 "36ed67159695141b64f28ff9e1a38b73ddfbd1d2aec01048aa84d3bcce4cd838"
+      url "https://github.com/rollwagen/tf-module-versions/releases/download/v0.0.7/tf-module-versions_0.0.7_darwin_arm64.tar.gz"
+      sha256 "f0b181fdcfb28d721f72b990c1b2f02f08f88fd457a95a91a51b5773ad4d7747"
 
       def install
         bin.install "tfm"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/tf-module-versions/releases/download/v0.0.6/tf-module-versions_0.0.6_darwin_amd64.tar.gz"
-      sha256 "68eb8e0e5513ab5502dfb393dce3fd7331926017c09a0089a8b8bf7e3fafde5d"
+      url "https://github.com/rollwagen/tf-module-versions/releases/download/v0.0.7/tf-module-versions_0.0.7_darwin_amd64.tar.gz"
+      sha256 "093554a334e0ef7ac8ac7ae5a625c135cf4d3e60141a96022fa1afb96ef74bcb"
 
       def install
         bin.install "tfm"
@@ -28,17 +28,17 @@ class TfModuleVersions < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rollwagen/tf-module-versions/releases/download/v0.0.6/tf-module-versions_0.0.6_linux_arm64.tar.gz"
-      sha256 "7e410e5430245daeb395b80b26914a4ecfb3878b3f284f5df110fc56bdea9b9b"
+    if Hardware::CPU.intel?
+      url "https://github.com/rollwagen/tf-module-versions/releases/download/v0.0.7/tf-module-versions_0.0.7_linux_amd64.tar.gz"
+      sha256 "67fb990251a8e3e32e6aeb4f6db175d8c7956c734ac5c874dc84f7445012e9fe"
 
       def install
         bin.install "tfm"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/tf-module-versions/releases/download/v0.0.6/tf-module-versions_0.0.6_linux_amd64.tar.gz"
-      sha256 "55d682068308b8592f9383610042e3da05b7e4f17faa385665d53fd7754eba11"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rollwagen/tf-module-versions/releases/download/v0.0.7/tf-module-versions_0.0.7_linux_arm64.tar.gz"
+      sha256 "a8f2eadd7b9761df2de732e4f9976fc1ee49d5c1d4142280f433e1a655ed2791"
 
       def install
         bin.install "tfm"
