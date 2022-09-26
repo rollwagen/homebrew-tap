@@ -5,21 +5,21 @@
 class Clown < Formula
   desc ""
   homepage ""
-  version "0.0.1"
+  version "0.0.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rollwagen/clown/releases/download/v0.0.1/clown_0.0.1_darwin_arm64.tar.gz"
-      sha256 "dda93b10abe810eaa0ed446803f4f05278a1e0723d135657e4548e58e40d5731"
+      url "https://github.com/rollwagen/clown/releases/download/v0.0.2/clown_0.0.2_darwin_arm64.tar.gz"
+      sha256 "3ca270a0971561e73f54861b329a8af905f0de4ed3e90ecc5631e5657f91ffcb"
 
       def install
         bin.install "clown"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/clown/releases/download/v0.0.1/clown_0.0.1_darwin_amd64.tar.gz"
-      sha256 "b4bbd58b79d07ddbb45c23f432f7ba7ea495eb3ef3f06cfc1ff5795905f1b9c2"
+      url "https://github.com/rollwagen/clown/releases/download/v0.0.2/clown_0.0.2_darwin_amd64.tar.gz"
+      sha256 "7f08b7c920bf80c847d9ffded2db66f5495445aa8a3b8e2aaf88023b4d1070ae"
 
       def install
         bin.install "clown"
@@ -29,16 +29,16 @@ class Clown < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rollwagen/clown/releases/download/v0.0.1/clown_0.0.1_linux_arm64.tar.gz"
-      sha256 "6bccd16c8342d9a1050513ffac426c847f780aa282260c96a0b7dd31621e8cac"
+      url "https://github.com/rollwagen/clown/releases/download/v0.0.2/clown_0.0.2_linux_arm64.tar.gz"
+      sha256 "b362afd2000cb46166aa233b8c69fdf6391fb28199f84d3d5d8007e4c3bfc51c"
 
       def install
         bin.install "clown"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/clown/releases/download/v0.0.1/clown_0.0.1_linux_amd64.tar.gz"
-      sha256 "7ca0978e02d2d3180a9193d027046f9ef7f8a32ea344f0c4a6f2704f06797343"
+      url "https://github.com/rollwagen/clown/releases/download/v0.0.2/clown_0.0.2_linux_amd64.tar.gz"
+      sha256 "3550590a8f8745ec5a5890cb0551efc94ad3fa53759c24146afd1671d1fe3690"
 
       def install
         bin.install "clown"
