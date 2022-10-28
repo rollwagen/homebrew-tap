@@ -5,21 +5,21 @@
 class S3Cisbench < Formula
   desc ""
   homepage ""
-  version "0.0.10"
+  version "0.0.11"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rollwagen/s3-cisbench/releases/download/v0.0.10/s3-cisbench_0.0.10_darwin_arm64.tar.gz"
-      sha256 "a005db5fbb044c3b0a2fbb22a1b6ea177a59ec933dca249c49f499a8fb9ddc08"
+      url "https://github.com/rollwagen/s3-cisbench/releases/download/v0.0.11/s3-cisbench_0.0.11_darwin_arm64.tar.gz"
+      sha256 "3995bb5161d9f2d9b5d3fc95413d06e6a74607119391f93d82081d5362abccf3"
 
       def install
         bin.install "s3-cisbench"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/s3-cisbench/releases/download/v0.0.10/s3-cisbench_0.0.10_darwin_amd64.tar.gz"
-      sha256 "9d16980a19693ea35bfa918791cc1a02378f5392fd646ecf506596eb00838de4"
+      url "https://github.com/rollwagen/s3-cisbench/releases/download/v0.0.11/s3-cisbench_0.0.11_darwin_amd64.tar.gz"
+      sha256 "0c37993cdc908b6c00a658d6bc9a643686101ed9725f813c85deff5a46d0de78"
 
       def install
         bin.install "s3-cisbench"
@@ -29,16 +29,16 @@ class S3Cisbench < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rollwagen/s3-cisbench/releases/download/v0.0.10/s3-cisbench_0.0.10_linux_arm64.tar.gz"
-      sha256 "d0423031d0b0380875f0e0c7eeec8f24cd30b83ae5fad37fa1c49a8601375d5e"
+      url "https://github.com/rollwagen/s3-cisbench/releases/download/v0.0.11/s3-cisbench_0.0.11_linux_arm64.tar.gz"
+      sha256 "f76f5f15c5c8783f29f91288cc383d4733c19f6207c26f2c90b2aa85df93e983"
 
       def install
         bin.install "s3-cisbench"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/s3-cisbench/releases/download/v0.0.10/s3-cisbench_0.0.10_linux_amd64.tar.gz"
-      sha256 "21949b0a52bea2f725297c946de1dfaad1752e73c0c74a50a0a6e1ca05f28a3f"
+      url "https://github.com/rollwagen/s3-cisbench/releases/download/v0.0.11/s3-cisbench_0.0.11_linux_amd64.tar.gz"
+      sha256 "f7d0ae46f147711a7dc8c9f9f3031189afe3fa8a43ec983fc6fb6ec1f036c590"
 
       def install
         bin.install "s3-cisbench"
