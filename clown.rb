@@ -5,43 +5,55 @@
 class Clown < Formula
   desc ""
   homepage ""
-  version "0.0.4"
+  version "0.0.5"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rollwagen/clown/releases/download/v0.0.4/clown_0.0.4_darwin_arm64.tar.gz"
-      sha256 "28ac40389e259b8641f47c485e017bc0b18a6f254aed73ad51a27a8cb8df7277"
+      url "https://github.com/rollwagen/clown/releases/download/v0.0.5/clown_0.0.5_darwin_arm64.tar.gz"
+      sha256 "20ac27738c419ba356193921ad9b4ace3b2c850733ab38b5eb8dd215e41cee52"
 
       def install
         bin.install "clown"
+        bash_completion.install "completions/clown.bash" => "clown"
+        zsh_completion.install "completions/clown.zsh" => "_clown"
+        fish_completion.install "completions/clown.fish"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/clown/releases/download/v0.0.4/clown_0.0.4_darwin_amd64.tar.gz"
-      sha256 "037b92d35cbd63542434d82c4ec07687c628841263634ede1772e8e81d041a53"
+      url "https://github.com/rollwagen/clown/releases/download/v0.0.5/clown_0.0.5_darwin_amd64.tar.gz"
+      sha256 "889b9c88f5a65a3c3bd0df34bd5a792dbcc8e26b1c8a6210c5ac2bdf4e736a3c"
 
       def install
         bin.install "clown"
+        bash_completion.install "completions/clown.bash" => "clown"
+        zsh_completion.install "completions/clown.zsh" => "_clown"
+        fish_completion.install "completions/clown.fish"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/clown/releases/download/v0.0.4/clown_0.0.4_linux_amd64.tar.gz"
-      sha256 "2ab5d750bd9517c4b330787075f44a819ee99586017736b70003c53c7ac29149"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rollwagen/clown/releases/download/v0.0.5/clown_0.0.5_linux_arm64.tar.gz"
+      sha256 "070a24eea4c85f38e8cb92d43e1f3f4f24ef2b6094f20428cb20bc6dd0e223e9"
 
       def install
         bin.install "clown"
+        bash_completion.install "completions/clown.bash" => "clown"
+        zsh_completion.install "completions/clown.zsh" => "_clown"
+        fish_completion.install "completions/clown.fish"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rollwagen/clown/releases/download/v0.0.4/clown_0.0.4_linux_arm64.tar.gz"
-      sha256 "37b95e7a453504d4f35a4075fc394c210b4466e657da48764f78f59a79f07571"
+    if Hardware::CPU.intel?
+      url "https://github.com/rollwagen/clown/releases/download/v0.0.5/clown_0.0.5_linux_amd64.tar.gz"
+      sha256 "86224cb97683bd5cc35c26a8422010c8433070b355b12f768f2741c331cf3219"
 
       def install
         bin.install "clown"
+        bash_completion.install "completions/clown.bash" => "clown"
+        zsh_completion.install "completions/clown.zsh" => "_clown"
+        fish_completion.install "completions/clown.fish"
       end
     end
   end
