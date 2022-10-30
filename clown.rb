@@ -5,13 +5,13 @@
 class Clown < Formula
   desc ""
   homepage ""
-  version "0.0.16"
+  version "0.0.17"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rollwagen/clown/releases/download/v0.0.16/clown_0.0.16_darwin_arm64.tar.gz"
-      sha256 "5dfe71c7eb0f532c21654be87a4933a2561f33c67ed171f5225682d8287c0d61"
+      url "https://github.com/rollwagen/clown/releases/download/v0.0.17/clown_0.0.17_darwin_arm64.tar.gz"
+      sha256 "862afbbc47915e9526be4fecd9688cf6538f13001adb35525ca9aceddeb6c436"
 
       def install
         bin.install "clown"
@@ -21,8 +21,8 @@ class Clown < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/clown/releases/download/v0.0.16/clown_0.0.16_darwin_amd64.tar.gz"
-      sha256 "2573f142019fd7701a5a3ddf5dac69941fa4f0587d083aad4ffe36a6ed0d6207"
+      url "https://github.com/rollwagen/clown/releases/download/v0.0.17/clown_0.0.17_darwin_amd64.tar.gz"
+      sha256 "620efbdf7f70334e8628330cc02f8b08dab3667bc76a08cbd48eec83502138ff"
 
       def install
         bin.install "clown"
@@ -35,8 +35,8 @@ class Clown < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rollwagen/clown/releases/download/v0.0.16/clown_0.0.16_linux_arm64.tar.gz"
-      sha256 "9cfd441a8267f10266e7e7e25010ea81d9033e9c4ba3ae430afa1d304adcf219"
+      url "https://github.com/rollwagen/clown/releases/download/v0.0.17/clown_0.0.17_linux_arm64.tar.gz"
+      sha256 "cd369b0e96b23ee3a9f46e6b6c6ff3d1a36f4cff9217007db1de4b0cf686475a"
 
       def install
         bin.install "clown"
@@ -46,8 +46,8 @@ class Clown < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/clown/releases/download/v0.0.16/clown_0.0.16_linux_amd64.tar.gz"
-      sha256 "ce89be7903c6d55056015ead72f99c2ad424ed574a04ad2a3930d01aaa3a8f73"
+      url "https://github.com/rollwagen/clown/releases/download/v0.0.17/clown_0.0.17_linux_amd64.tar.gz"
+      sha256 "cba474a367b930670d462f78ac4f8a100478fe6bd8b3472e425197c265c607b8"
 
       def install
         bin.install "clown"
