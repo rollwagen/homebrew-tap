@@ -5,13 +5,13 @@
 class TfModuleVersions < Formula
   desc ""
   homepage ""
-  version "0.0.10"
+  version "0.0.11"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rollwagen/tf-module-versions/releases/download/v0.0.10/tf-module-versions_0.0.10_darwin_arm64.tar.gz"
-      sha256 "af2da0e3a83708188371513261fe0ea5e5da6f2fe7bc98e6b536d83ea07ff9ba"
+      url "https://github.com/rollwagen/tf-module-versions/releases/download/v0.0.11/tf-module-versions_0.0.11_darwin_arm64.tar.gz"
+      sha256 "991003f2e95eb359a61f21e21e5489feef73cda6cc6873db8fa9986e82a42078"
 
       def install
         bin.install "tfm"
@@ -21,8 +21,8 @@ class TfModuleVersions < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/tf-module-versions/releases/download/v0.0.10/tf-module-versions_0.0.10_darwin_amd64.tar.gz"
-      sha256 "b216cde0bb5d4468d75c90e7353fef3a2cac95ba0da3d4a17741d21249bdcf2e"
+      url "https://github.com/rollwagen/tf-module-versions/releases/download/v0.0.11/tf-module-versions_0.0.11_darwin_amd64.tar.gz"
+      sha256 "f4f613cf16078e1d4e5f1dc04960f6727d39cc200f72fd4d670ccc6d358a79c3"
 
       def install
         bin.install "tfm"
@@ -35,8 +35,8 @@ class TfModuleVersions < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rollwagen/tf-module-versions/releases/download/v0.0.10/tf-module-versions_0.0.10_linux_arm64.tar.gz"
-      sha256 "a811db0fdf6f23a01a4d9b9860c86b21448a151ace9d4de1e1278ea1ba48e578"
+      url "https://github.com/rollwagen/tf-module-versions/releases/download/v0.0.11/tf-module-versions_0.0.11_linux_arm64.tar.gz"
+      sha256 "18cb3ddd4a495039db5d78984c700f0e8465ffa1c9df6f0687ab7bbb875c05d3"
 
       def install
         bin.install "tfm"
@@ -46,8 +46,8 @@ class TfModuleVersions < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/tf-module-versions/releases/download/v0.0.10/tf-module-versions_0.0.10_linux_amd64.tar.gz"
-      sha256 "333fc2c6340b18db951110d03aace9dd7f60abeaf2c699fff6cf599a811c31d0"
+      url "https://github.com/rollwagen/tf-module-versions/releases/download/v0.0.11/tf-module-versions_0.0.11_linux_amd64.tar.gz"
+      sha256 "491a7f8cc50c08a09c5d1a73ee0a27d5ed14d54ee0a6e637022b955da2f98f10"
 
       def install
         bin.install "tfm"
