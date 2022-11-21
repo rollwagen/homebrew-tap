@@ -5,13 +5,13 @@
 class TfModuleVersions < Formula
   desc ""
   homepage ""
-  version "0.0.14"
+  version "0.0.15"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/rollwagen/tf-module-versions/releases/download/v0.0.14/tf-module-versions_0.0.14_darwin_arm64.tar.gz"
-      sha256 "ed73545d81b7be068f8201ba6c9c1b1e47bb3cabbe4b65dea7494886832d0875"
+    if Hardware::CPU.intel?
+      url "https://github.com/rollwagen/tf-module-versions/releases/download/v0.0.15/tf-module-versions_0.0.15_darwin_amd64.tar.gz"
+      sha256 "86abbfc0036a4167f9bbf6473f9e32ffa084a2957be6b49ab75df99813046624"
 
       def install
         bin.install "tfm"
@@ -20,9 +20,9 @@ class TfModuleVersions < Formula
         fish_completion.install "completions/tfm.fish"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/tf-module-versions/releases/download/v0.0.14/tf-module-versions_0.0.14_darwin_amd64.tar.gz"
-      sha256 "7f6074bc6858aa6e780d170d30ad3c6874b8ea031be437e04c51002f25412d64"
+    if Hardware::CPU.arm?
+      url "https://github.com/rollwagen/tf-module-versions/releases/download/v0.0.15/tf-module-versions_0.0.15_darwin_arm64.tar.gz"
+      sha256 "a305a950411f6f627ef851767cc67184647d679080706b3a27844e6879f317f6"
 
       def install
         bin.install "tfm"
@@ -34,9 +34,9 @@ class TfModuleVersions < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/tf-module-versions/releases/download/v0.0.14/tf-module-versions_0.0.14_linux_amd64.tar.gz"
-      sha256 "fdc5d8a81942e01019c36c1cbe27365ddc13f15b4e86eeffa43380a1e2cf8c2d"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rollwagen/tf-module-versions/releases/download/v0.0.15/tf-module-versions_0.0.15_linux_arm64.tar.gz"
+      sha256 "4d6f5c475d1351c49ff2777d9b5a01389c70a0aa447c9a3a2eb040595c09ae36"
 
       def install
         bin.install "tfm"
@@ -45,9 +45,9 @@ class TfModuleVersions < Formula
         fish_completion.install "completions/tfm.fish"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rollwagen/tf-module-versions/releases/download/v0.0.14/tf-module-versions_0.0.14_linux_arm64.tar.gz"
-      sha256 "0f98f3667aa4a13084d1dda6180ad5360c6c12919d071e222e8d40e65ba5255f"
+    if Hardware::CPU.intel?
+      url "https://github.com/rollwagen/tf-module-versions/releases/download/v0.0.15/tf-module-versions_0.0.15_linux_amd64.tar.gz"
+      sha256 "3a99d786096996bb893f05ab0934b6abfdba64be8550e731fced6b1bbad994bf"
 
       def install
         bin.install "tfm"
