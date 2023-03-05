@@ -5,13 +5,13 @@
 class Clown < Formula
   desc ""
   homepage ""
-  version "0.0.17"
+  version "0.0.18"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/rollwagen/clown/releases/download/v0.0.17/clown_0.0.17_darwin_arm64.tar.gz"
-      sha256 "862afbbc47915e9526be4fecd9688cf6538f13001adb35525ca9aceddeb6c436"
+    if Hardware::CPU.intel?
+      url "https://github.com/rollwagen/clown/releases/download/v0.0.18/clown_0.0.18_darwin_amd64.tar.gz"
+      sha256 "19fdead6108b04dde1b043b627276a40d374ddd36d4ef98f1936b05b5127b84c"
 
       def install
         bin.install "clown"
@@ -20,9 +20,9 @@ class Clown < Formula
         fish_completion.install "completions/clown.fish"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/clown/releases/download/v0.0.17/clown_0.0.17_darwin_amd64.tar.gz"
-      sha256 "620efbdf7f70334e8628330cc02f8b08dab3667bc76a08cbd48eec83502138ff"
+    if Hardware::CPU.arm?
+      url "https://github.com/rollwagen/clown/releases/download/v0.0.18/clown_0.0.18_darwin_arm64.tar.gz"
+      sha256 "daa8f1cbe6d7052c0db7ee472f8630ea16a1a92a2b7e06ae185d9e00d154b509"
 
       def install
         bin.install "clown"
@@ -35,8 +35,8 @@ class Clown < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rollwagen/clown/releases/download/v0.0.17/clown_0.0.17_linux_arm64.tar.gz"
-      sha256 "cd369b0e96b23ee3a9f46e6b6c6ff3d1a36f4cff9217007db1de4b0cf686475a"
+      url "https://github.com/rollwagen/clown/releases/download/v0.0.18/clown_0.0.18_linux_arm64.tar.gz"
+      sha256 "9c93752659076447e1d49462e823ba492a00c33fd3cfe1e578b2d3fee66209df"
 
       def install
         bin.install "clown"
@@ -46,8 +46,8 @@ class Clown < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/clown/releases/download/v0.0.17/clown_0.0.17_linux_amd64.tar.gz"
-      sha256 "cba474a367b930670d462f78ac4f8a100478fe6bd8b3472e425197c265c607b8"
+      url "https://github.com/rollwagen/clown/releases/download/v0.0.18/clown_0.0.18_linux_amd64.tar.gz"
+      sha256 "c663a7782d4e1b325c301912e0d681c2830198706a7fcf0051501499e4e20262"
 
       def install
         bin.install "clown"
