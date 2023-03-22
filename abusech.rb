@@ -5,55 +5,55 @@
 class Abusech < Formula
   desc ""
   homepage ""
-  version "0.0.2"
+  version "0.0.3"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/abusech/releases/download/v0.0.2/abusech_0.0.2_darwin_amd64.tar.gz"
-      sha256 "62bc60c5e7004d23917058b5cb88ddd050800e4f50a6a4805d2b269b44dd9685"
+    if Hardware::CPU.arm?
+      url "https://github.com/rollwagen/abusech/releases/download/v0.0.3/abusech_0.0.3_darwin_arm64.tar.gz"
+      sha256 "4f3dc4581fa6a991fb4fba24e455a2def04da73483a9bc5c8d37068bb6515503"
 
       def install
         bin.install "abusech"
-        bash_completion.install "completions/aws-services.bash" => "abusech"
-        zsh_completion.install "completions/aws-services.zsh" => "_abusech"
-        fish_completion.install "completions/aws-services.fish"
+        bash_completion.install "completions/abusech.bash" => "abusech"
+        zsh_completion.install "completions/abusech.zsh" => "_abusech"
+        fish_completion.install "completions/abusech.fish"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/rollwagen/abusech/releases/download/v0.0.2/abusech_0.0.2_darwin_arm64.tar.gz"
-      sha256 "130034afe75fb70b63095d1784f9b97c2e74166bb913ed76111ca633e74e5ecf"
+    if Hardware::CPU.intel?
+      url "https://github.com/rollwagen/abusech/releases/download/v0.0.3/abusech_0.0.3_darwin_amd64.tar.gz"
+      sha256 "2fcc2322fd967217cf414391ffe7d161a241cb786c829ef3aec8a13e5eb3c287"
 
       def install
         bin.install "abusech"
-        bash_completion.install "completions/aws-services.bash" => "abusech"
-        zsh_completion.install "completions/aws-services.zsh" => "_abusech"
-        fish_completion.install "completions/aws-services.fish"
+        bash_completion.install "completions/abusech.bash" => "abusech"
+        zsh_completion.install "completions/abusech.zsh" => "_abusech"
+        fish_completion.install "completions/abusech.fish"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rollwagen/abusech/releases/download/v0.0.2/abusech_0.0.2_linux_arm64.tar.gz"
-      sha256 "b3dbf04a51022450c90988f0d47cfc1e45260fb31198767ddbf2a7f194a571cc"
+      url "https://github.com/rollwagen/abusech/releases/download/v0.0.3/abusech_0.0.3_linux_arm64.tar.gz"
+      sha256 "e9fc27bd3a9bf46e8630e6201b8ab1c9c7e73d75ce3a1d9e91d40ca157f49bee"
 
       def install
         bin.install "abusech"
-        bash_completion.install "completions/aws-services.bash" => "abusech"
-        zsh_completion.install "completions/aws-services.zsh" => "_abusech"
-        fish_completion.install "completions/aws-services.fish"
+        bash_completion.install "completions/abusech.bash" => "abusech"
+        zsh_completion.install "completions/abusech.zsh" => "_abusech"
+        fish_completion.install "completions/abusech.fish"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/abusech/releases/download/v0.0.2/abusech_0.0.2_linux_amd64.tar.gz"
-      sha256 "5071b7fa17c2db2b179364677a7cb2fd423c4064f6765ba5dd8464f9c68eb7de"
+      url "https://github.com/rollwagen/abusech/releases/download/v0.0.3/abusech_0.0.3_linux_amd64.tar.gz"
+      sha256 "ec3f511ee40845820bfa076988c0c492168625e331c1bfff8688676d459b87e3"
 
       def install
         bin.install "abusech"
-        bash_completion.install "completions/aws-services.bash" => "abusech"
-        zsh_completion.install "completions/aws-services.zsh" => "_abusech"
-        fish_completion.install "completions/aws-services.fish"
+        bash_completion.install "completions/abusech.bash" => "abusech"
+        zsh_completion.install "completions/abusech.zsh" => "_abusech"
+        fish_completion.install "completions/abusech.fish"
       end
     end
   end
