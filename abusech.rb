@@ -5,13 +5,13 @@
 class Abusech < Formula
   desc ""
   homepage ""
-  version "0.0.3"
+  version "0.0.4"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rollwagen/abusech/releases/download/v0.0.3/abusech_0.0.3_darwin_arm64.tar.gz"
-      sha256 "4f3dc4581fa6a991fb4fba24e455a2def04da73483a9bc5c8d37068bb6515503"
+      url "https://github.com/rollwagen/abusech/releases/download/v0.0.4/abusech_0.0.4_darwin_arm64.tar.gz"
+      sha256 "3bed235e76e8cb26dbdb0515fc862a84c6c2dc21cddadfa71813d32e932b765a"
 
       def install
         bin.install "abusech"
@@ -21,8 +21,8 @@ class Abusech < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/abusech/releases/download/v0.0.3/abusech_0.0.3_darwin_amd64.tar.gz"
-      sha256 "2fcc2322fd967217cf414391ffe7d161a241cb786c829ef3aec8a13e5eb3c287"
+      url "https://github.com/rollwagen/abusech/releases/download/v0.0.4/abusech_0.0.4_darwin_amd64.tar.gz"
+      sha256 "6fcc7a9edc71af1a180f4abc66e9457b36bd8e7c719f3aeb87a4c46dc38a9f20"
 
       def install
         bin.install "abusech"
@@ -35,8 +35,8 @@ class Abusech < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rollwagen/abusech/releases/download/v0.0.3/abusech_0.0.3_linux_arm64.tar.gz"
-      sha256 "e9fc27bd3a9bf46e8630e6201b8ab1c9c7e73d75ce3a1d9e91d40ca157f49bee"
+      url "https://github.com/rollwagen/abusech/releases/download/v0.0.4/abusech_0.0.4_linux_arm64.tar.gz"
+      sha256 "fcac09ef30c670c78cc46d141b753b4d331df2bdf95263ce73cfe5c871bd64c7"
 
       def install
         bin.install "abusech"
@@ -46,8 +46,8 @@ class Abusech < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/abusech/releases/download/v0.0.3/abusech_0.0.3_linux_amd64.tar.gz"
-      sha256 "ec3f511ee40845820bfa076988c0c492168625e331c1bfff8688676d459b87e3"
+      url "https://github.com/rollwagen/abusech/releases/download/v0.0.4/abusech_0.0.4_linux_amd64.tar.gz"
+      sha256 "ff18e44af3eada86d0df3b8cc758bfb7e3535b5c8fdc6c8a32e4eb1e6913833e"
 
       def install
         bin.install "abusech"
