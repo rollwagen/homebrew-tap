@@ -5,13 +5,13 @@
 class Abusech < Formula
   desc ""
   homepage ""
-  version "0.0.4"
+  version "0.0.5"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rollwagen/abusech/releases/download/v0.0.4/abusech_0.0.4_darwin_arm64.tar.gz"
-      sha256 "3bed235e76e8cb26dbdb0515fc862a84c6c2dc21cddadfa71813d32e932b765a"
+      url "https://github.com/rollwagen/abusech/releases/download/v0.0.5/abusech_0.0.5_darwin_arm64.tar.gz"
+      sha256 "4d5eea76bc93afea5a072eb77a8406538fff661dd7ca5f33e6454b681965dfa5"
 
       def install
         bin.install "abusech"
@@ -21,8 +21,8 @@ class Abusech < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/abusech/releases/download/v0.0.4/abusech_0.0.4_darwin_amd64.tar.gz"
-      sha256 "6fcc7a9edc71af1a180f4abc66e9457b36bd8e7c719f3aeb87a4c46dc38a9f20"
+      url "https://github.com/rollwagen/abusech/releases/download/v0.0.5/abusech_0.0.5_darwin_amd64.tar.gz"
+      sha256 "32c2c17cd080fa2b400e075a6103fa2d1cf1e37b128cf004348206888b75df64"
 
       def install
         bin.install "abusech"
@@ -34,9 +34,9 @@ class Abusech < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rollwagen/abusech/releases/download/v0.0.4/abusech_0.0.4_linux_arm64.tar.gz"
-      sha256 "fcac09ef30c670c78cc46d141b753b4d331df2bdf95263ce73cfe5c871bd64c7"
+    if Hardware::CPU.intel?
+      url "https://github.com/rollwagen/abusech/releases/download/v0.0.5/abusech_0.0.5_linux_amd64.tar.gz"
+      sha256 "bb74c6f06ab3accc245b5a1db3ef5ccc5a73cb923e453d8c68078a2680b9401b"
 
       def install
         bin.install "abusech"
@@ -45,9 +45,9 @@ class Abusech < Formula
         fish_completion.install "completions/abusech.fish"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/abusech/releases/download/v0.0.4/abusech_0.0.4_linux_amd64.tar.gz"
-      sha256 "ff18e44af3eada86d0df3b8cc758bfb7e3535b5c8fdc6c8a32e4eb1e6913833e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rollwagen/abusech/releases/download/v0.0.5/abusech_0.0.5_linux_arm64.tar.gz"
+      sha256 "553dc7580f41d154b1d1637b21d79b179b1096ddc4260efc074c9d6bcc2a4ef5"
 
       def install
         bin.install "abusech"
