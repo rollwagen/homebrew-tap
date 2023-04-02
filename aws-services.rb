@@ -5,13 +5,13 @@
 class AwsServices < Formula
   desc ""
   homepage ""
-  version "0.0.16"
+  version "0.0.17"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/rollwagen/aws-services/releases/download/v0.0.16/aws-services_0.0.16_darwin_arm64.tar.gz"
-      sha256 "649271980d96a6062a2cea38124f46c20fea73c0d3f8215eae023d7b93069bfd"
+    if Hardware::CPU.intel?
+      url "https://github.com/rollwagen/aws-services/releases/download/v0.0.17/aws-services_0.0.17_darwin_amd64.tar.gz"
+      sha256 "a705e18f417118d58ac43ea74e71fd92db3aef47fc516b1c6f74a4912c7501fa"
 
       def install
         bin.install "aws-services"
@@ -20,9 +20,9 @@ class AwsServices < Formula
         fish_completion.install "completions/aws-services.fish"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/aws-services/releases/download/v0.0.16/aws-services_0.0.16_darwin_amd64.tar.gz"
-      sha256 "f1988e2522b86760d96dd4b8c7bf94d26897fb7a9a39dcd7054e7fde33d2c1f5"
+    if Hardware::CPU.arm?
+      url "https://github.com/rollwagen/aws-services/releases/download/v0.0.17/aws-services_0.0.17_darwin_arm64.tar.gz"
+      sha256 "d3bafcbaa23796a1ea9e6452ecf61b5edafc9c8eacccc3591326cd2e09cea9bd"
 
       def install
         bin.install "aws-services"
@@ -34,9 +34,9 @@ class AwsServices < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/aws-services/releases/download/v0.0.16/aws-services_0.0.16_linux_amd64.tar.gz"
-      sha256 "ff35f60aa2dc4f3587534e638dc7b60f39f7adbc006a79381e06256ce6e81d09"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rollwagen/aws-services/releases/download/v0.0.17/aws-services_0.0.17_linux_arm64.tar.gz"
+      sha256 "62c71ec53be98eac8d658a48058148bf304a2c8649f3cdaea6e0239a2908f023"
 
       def install
         bin.install "aws-services"
@@ -45,9 +45,9 @@ class AwsServices < Formula
         fish_completion.install "completions/aws-services.fish"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rollwagen/aws-services/releases/download/v0.0.16/aws-services_0.0.16_linux_arm64.tar.gz"
-      sha256 "6e62f50778e2ef9713962b5f970087cd2fb307ab29e1452198e2e8e2eab0fa84"
+    if Hardware::CPU.intel?
+      url "https://github.com/rollwagen/aws-services/releases/download/v0.0.17/aws-services_0.0.17_linux_amd64.tar.gz"
+      sha256 "1af729739268708e4058c610f9b60b8f3d7cca95b6b9adb0ac86d6c429863aa7"
 
       def install
         bin.install "aws-services"
