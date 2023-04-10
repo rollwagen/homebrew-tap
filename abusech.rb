@@ -5,13 +5,13 @@
 class Abusech < Formula
   desc ""
   homepage ""
-  version "0.0.10"
+  version "0.0.11"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/abusech/releases/download/v0.0.10/abusech_0.0.10_darwin_amd64.tar.gz"
-      sha256 "37a3e826501bbd1b71b2f0662c388993cd915ae5c93b8caa325a45aed8175147"
+    if Hardware::CPU.arm?
+      url "https://github.com/rollwagen/abusech/releases/download/0.0.11/abusech_0.0.11_darwin_arm64.tar.gz"
+      sha256 "bd603636df3617f16c1bc08e0b01ce2f7d4609fe08f53bded12cdacc088dd55f"
 
       def install
         bin.install "abusech"
@@ -20,9 +20,9 @@ class Abusech < Formula
         fish_completion.install "completions/abusech.fish"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/rollwagen/abusech/releases/download/v0.0.10/abusech_0.0.10_darwin_arm64.tar.gz"
-      sha256 "4e55f612eb10620acdc3f6106474c4541bd5b87f464fc569726a62fb686c11d8"
+    if Hardware::CPU.intel?
+      url "https://github.com/rollwagen/abusech/releases/download/0.0.11/abusech_0.0.11_darwin_amd64.tar.gz"
+      sha256 "166379a1523d7cc1107c5ee49b552ea734bbecc61b304a34bc3920639b75c75a"
 
       def install
         bin.install "abusech"
@@ -35,8 +35,8 @@ class Abusech < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rollwagen/abusech/releases/download/v0.0.10/abusech_0.0.10_linux_arm64.tar.gz"
-      sha256 "7a3eb06f823348445913bf654cf7891fedb203685e25ec3e25572e9118890310"
+      url "https://github.com/rollwagen/abusech/releases/download/0.0.11/abusech_0.0.11_linux_arm64.tar.gz"
+      sha256 "d205137308b7ed81a971ebfc6bd44abaa2e2f0f873cbf7482e1a0c429b59cf93"
 
       def install
         bin.install "abusech"
@@ -46,8 +46,8 @@ class Abusech < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/abusech/releases/download/v0.0.10/abusech_0.0.10_linux_amd64.tar.gz"
-      sha256 "ebd07a80e14f921c883d9a7467c2e3888c916eb53be1516896590a522ad8c117"
+      url "https://github.com/rollwagen/abusech/releases/download/0.0.11/abusech_0.0.11_linux_amd64.tar.gz"
+      sha256 "ffe3ce1cf1f307e3120e557184251a5265cd8adb21556e877c852f794cee3b6c"
 
       def install
         bin.install "abusech"
