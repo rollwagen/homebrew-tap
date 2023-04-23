@@ -5,28 +5,31 @@
 class Apoch < Formula
   desc ""
   homepage ""
-  version "0.0.6"
+  version "0.0.7"
   license "Apache-2.0"
   depends_on :macos
 
   on_macos do
-    url "https://github.com/rollwagen/apoch/releases/download/0.0.6/apoch_0.0.6_darwin_amd64.tar.gz"
-    sha256 "47f19fa4d55a2b62c9229935eb5804185036d66edef467bc2147af98528b01b4"
-
-    def install
-      bin.install "apoch"
-      bash_completion.install "completions/apoch.bash" => "apoch"
-      zsh_completion.install "completions/apoch.zsh" => "_apoch"
-      fish_completion.install "completions/apoch.fish"
-    end
-
     if Hardware::CPU.arm?
-      def caveats
-        <<~EOS
-          The darwin_arm64 architecture is not supported for the Apoch
-          formula at this time. The darwin_amd64 binary may work in compatibility
-          mode, but it might not be fully supported.
-        EOS
+      url "https://github.com/rollwagen/apoch/releases/download/0.0.7/apoch_0.0.7_darwin_arm64.tar.gz"
+      sha256 "ad642c95f40a06e1132f7e234ea4b28b29ed20f55d3e5bdd2e0aac33a10f0acb"
+
+      def install
+        bin.install "apoch"
+        bash_completion.install "completions/apoch.bash" => "apoch"
+        zsh_completion.install "completions/apoch.zsh" => "_apoch"
+        fish_completion.install "completions/apoch.fish"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/rollwagen/apoch/releases/download/0.0.7/apoch_0.0.7_darwin_amd64.tar.gz"
+      sha256 "c22c5379f34855dcba197376e44350eb65aa2a1049164e9ce1ccbd3f22718102"
+
+      def install
+        bin.install "apoch"
+        bash_completion.install "completions/apoch.bash" => "apoch"
+        zsh_completion.install "completions/apoch.zsh" => "_apoch"
+        fish_completion.install "completions/apoch.fish"
       end
     end
   end
