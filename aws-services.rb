@@ -5,13 +5,13 @@
 class AwsServices < Formula
   desc ""
   homepage ""
-  version "0.0.19"
+  version "0.0.20"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/aws-services/releases/download/0.0.19/aws-services_0.0.19_darwin_amd64.tar.gz"
-      sha256 "4b50c67301d98d1feeaa3a18f061e0f6c8eb6044fb3dd1730e4e18c2d0955b23"
+    if Hardware::CPU.arm?
+      url "https://github.com/rollwagen/aws-services/releases/download/v0.0.20/aws-services_0.0.20_darwin_arm64.tar.gz"
+      sha256 "30cc57fd6aece5fb06558b482a24bf061ca9c1ce1e228d70f790a70d66afe39c"
 
       def install
         bin.install "aws-services"
@@ -20,9 +20,9 @@ class AwsServices < Formula
         fish_completion.install "completions/aws-services.fish"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/rollwagen/aws-services/releases/download/0.0.19/aws-services_0.0.19_darwin_arm64.tar.gz"
-      sha256 "04899a56229c778862708d7280f15b4089c612811bf2b855a7c75d35bb14111a"
+    if Hardware::CPU.intel?
+      url "https://github.com/rollwagen/aws-services/releases/download/v0.0.20/aws-services_0.0.20_darwin_amd64.tar.gz"
+      sha256 "8c73bc279463d764e44d3bf9c4ab835c596841ed33afff01b66e99834ff4e6e3"
 
       def install
         bin.install "aws-services"
@@ -35,8 +35,8 @@ class AwsServices < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rollwagen/aws-services/releases/download/0.0.19/aws-services_0.0.19_linux_arm64.tar.gz"
-      sha256 "674102c59b5a830e79a042422bbb31a4ee7b43f692f6eff8fd330852cfcec1cb"
+      url "https://github.com/rollwagen/aws-services/releases/download/v0.0.20/aws-services_0.0.20_linux_arm64.tar.gz"
+      sha256 "13c09d16368a605c1ffa68324088dc16097e3da64427d03a08884a9d6bb37e10"
 
       def install
         bin.install "aws-services"
@@ -46,8 +46,8 @@ class AwsServices < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/aws-services/releases/download/0.0.19/aws-services_0.0.19_linux_amd64.tar.gz"
-      sha256 "e352a7e5cb45ddeec1ab32538af9dc9dd280521c4226028630a59e1708901b3a"
+      url "https://github.com/rollwagen/aws-services/releases/download/v0.0.20/aws-services_0.0.20_linux_amd64.tar.gz"
+      sha256 "c1d0e4e69a346dcb92b98c9f39fda8b103a9080e06ede59fb7ce3b02b647b7ca"
 
       def install
         bin.install "aws-services"
