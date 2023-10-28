@@ -5,13 +5,13 @@
 class S3Cisbench < Formula
   desc ""
   homepage ""
-  version "0.0.22"
+  version "0.0.23"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/s3-cisbench/releases/download/v0.0.22/s3-cisbench_0.0.22_darwin_amd64.tar.gz"
-      sha256 "462141c185e59f9a580a32dc1d69ee76c3266e849e4642ea168c2b60089811e7"
+    if Hardware::CPU.arm?
+      url "https://github.com/rollwagen/s3-cisbench/releases/download/v0.0.23/s3-cisbench_0.0.23_darwin_arm64.tar.gz"
+      sha256 "d058c5f21a413423f7df43a50915c73647893889e3cfa39d314bfeff93ee4ddf"
 
       def install
         bin.install "s3-cisbench"
@@ -20,9 +20,9 @@ class S3Cisbench < Formula
         fish_completion.install "completions/s3-cisbench.fish"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/rollwagen/s3-cisbench/releases/download/v0.0.22/s3-cisbench_0.0.22_darwin_arm64.tar.gz"
-      sha256 "b7a12f8dc0e89eb7bee4a11a2705a6196cdba512ffd9a77261017938e42a2282"
+    if Hardware::CPU.intel?
+      url "https://github.com/rollwagen/s3-cisbench/releases/download/v0.0.23/s3-cisbench_0.0.23_darwin_amd64.tar.gz"
+      sha256 "9a1ebf1efd92b34c42a70d807e32563fdf60c24675d2790128e47ad0400b42f1"
 
       def install
         bin.install "s3-cisbench"
@@ -35,8 +35,8 @@ class S3Cisbench < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rollwagen/s3-cisbench/releases/download/v0.0.22/s3-cisbench_0.0.22_linux_arm64.tar.gz"
-      sha256 "f6d81e909eaf4e6a2e51378109079a0933e1745d96c7c4c8c4613deb942ac7d5"
+      url "https://github.com/rollwagen/s3-cisbench/releases/download/v0.0.23/s3-cisbench_0.0.23_linux_arm64.tar.gz"
+      sha256 "7d3b0101cda295f42d56313ff8dcc563f9c50e975492c426d6031e28fee98c47"
 
       def install
         bin.install "s3-cisbench"
@@ -46,8 +46,8 @@ class S3Cisbench < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/s3-cisbench/releases/download/v0.0.22/s3-cisbench_0.0.22_linux_amd64.tar.gz"
-      sha256 "26aa75154b84912dacec00c7f78787ea7b3d242db147951d0bd6324e53286d7e"
+      url "https://github.com/rollwagen/s3-cisbench/releases/download/v0.0.23/s3-cisbench_0.0.23_linux_amd64.tar.gz"
+      sha256 "c9c2b0c480c256dcd760fd58d8033705f5380ad19126e9897811be3941eddc8a"
 
       def install
         bin.install "s3-cisbench"
