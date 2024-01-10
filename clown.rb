@@ -5,13 +5,13 @@
 class Clown < Formula
   desc ""
   homepage ""
-  version "0.0.18"
+  version "0.0.19"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/clown/releases/download/v0.0.18/clown_0.0.18_darwin_amd64.tar.gz"
-      sha256 "19fdead6108b04dde1b043b627276a40d374ddd36d4ef98f1936b05b5127b84c"
+    if Hardware::CPU.arm?
+      url "https://github.com/rollwagen/clown/releases/download/0.0.19/clown_0.0.19_darwin_arm64.tar.gz"
+      sha256 "4dcf626b85b8bad1fdc7c89f2673b9d36d39bf47fafe941a89ded307ad0d7d18"
 
       def install
         bin.install "clown"
@@ -20,9 +20,9 @@ class Clown < Formula
         fish_completion.install "completions/clown.fish"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/rollwagen/clown/releases/download/v0.0.18/clown_0.0.18_darwin_arm64.tar.gz"
-      sha256 "daa8f1cbe6d7052c0db7ee472f8630ea16a1a92a2b7e06ae185d9e00d154b509"
+    if Hardware::CPU.intel?
+      url "https://github.com/rollwagen/clown/releases/download/0.0.19/clown_0.0.19_darwin_amd64.tar.gz"
+      sha256 "4bfd39ee27196a6ba4ccf4985ebfad925e5a1c58a2ac621b7b54f78ea70c9b2c"
 
       def install
         bin.install "clown"
@@ -35,8 +35,8 @@ class Clown < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rollwagen/clown/releases/download/v0.0.18/clown_0.0.18_linux_arm64.tar.gz"
-      sha256 "9c93752659076447e1d49462e823ba492a00c33fd3cfe1e578b2d3fee66209df"
+      url "https://github.com/rollwagen/clown/releases/download/0.0.19/clown_0.0.19_linux_arm64.tar.gz"
+      sha256 "dcba0b1fd2da96af3b7095f273cb74f381eb08357a6edc3c6e9c76583c8a5349"
 
       def install
         bin.install "clown"
@@ -46,8 +46,8 @@ class Clown < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/clown/releases/download/v0.0.18/clown_0.0.18_linux_amd64.tar.gz"
-      sha256 "c663a7782d4e1b325c301912e0d681c2830198706a7fcf0051501499e4e20262"
+      url "https://github.com/rollwagen/clown/releases/download/0.0.19/clown_0.0.19_linux_amd64.tar.gz"
+      sha256 "a4fd45e60adc11294bac8ff31f8059075c3d9d94ff7abffd7899a76a40417741"
 
       def install
         bin.install "clown"
