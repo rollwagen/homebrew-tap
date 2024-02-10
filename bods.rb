@@ -5,32 +5,30 @@
 class Bods < Formula
   desc ""
   homepage ""
-  version "0.0.1"
+  version "0.0.2"
   license "MIT"
   depends_on :macos
 
-  on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/rollwagen/bods/releases/download/0.0.1/bods_0.0.1_darwin_arm64.tar.gz"
-      sha256 "96300033607802218c80509915c99e5559e1e1186a75f02e90273768d310dc27"
+  if Hardware::CPU.arm?
+    url "https://github.com/rollwagen/bods/releases/download/0.0.2/bods_0.0.2_darwin_arm64.tar.gz"
+    sha256 "608b252414022c68aa3c7bbca7910c2da7b896eae1b3f901aeb56d8a65201f4b"
 
-      def install
-        bin.install "bods"
-        bash_completion.install "completions/bods.bash" => "bods"
-        zsh_completion.install "completions/bods.zsh" => "_bods"
-        fish_completion.install "completions/bods.fish"
-      end
+    def install
+      bin.install "bods"
+      bash_completion.install "completions/bods.bash" => "bods"
+      zsh_completion.install "completions/bods.zsh" => "_bods"
+      fish_completion.install "completions/bods.fish"
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/bods/releases/download/0.0.1/bods_0.0.1_darwin_amd64.tar.gz"
-      sha256 "594d100b3317bd5007bc49ae687b84099d4461a8e4bbcfc102ac044883a24bc8"
+  end
+  if Hardware::CPU.intel?
+    url "https://github.com/rollwagen/bods/releases/download/0.0.2/bods_0.0.2_darwin_amd64.tar.gz"
+    sha256 "7a4871033dc30517124355544a5e575c35d60511898fbe04fd3315a427d7c546"
 
-      def install
-        bin.install "bods"
-        bash_completion.install "completions/bods.bash" => "bods"
-        zsh_completion.install "completions/bods.zsh" => "_bods"
-        fish_completion.install "completions/bods.fish"
-      end
+    def install
+      bin.install "bods"
+      bash_completion.install "completions/bods.bash" => "bods"
+      zsh_completion.install "completions/bods.zsh" => "_bods"
+      fish_completion.install "completions/bods.fish"
     end
   end
 end
