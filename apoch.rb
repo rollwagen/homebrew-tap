@@ -5,32 +5,30 @@
 class Apoch < Formula
   desc ""
   homepage ""
-  version "0.0.11"
+  version "0.0.12"
   license "Apache-2.0"
   depends_on :macos
 
-  on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/rollwagen/apoch/releases/download/0.0.11/apoch_0.0.11_darwin_arm64.tar.gz"
-      sha256 "3070852c6ecc9124dea736c401d804bdce2d06ecced6edcd842ed6a6c6f17a3e"
+  if Hardware::CPU.arm?
+    url "https://github.com/rollwagen/apoch/releases/download/0.0.12/apoch_0.0.12_darwin_arm64.tar.gz"
+    sha256 "40ef4d42e23b252bdb8cdaf94a2c956de3fc206a322680bb55cfc11117b2e879"
 
-      def install
-        bin.install "apoch"
-        bash_completion.install "completions/apoch.bash" => "apoch"
-        zsh_completion.install "completions/apoch.zsh" => "_apoch"
-        fish_completion.install "completions/apoch.fish"
-      end
+    def install
+      bin.install "apoch"
+      bash_completion.install "completions/apoch.bash" => "apoch"
+      zsh_completion.install "completions/apoch.zsh" => "_apoch"
+      fish_completion.install "completions/apoch.fish"
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/apoch/releases/download/0.0.11/apoch_0.0.11_darwin_amd64.tar.gz"
-      sha256 "ac700ed81069977b83aba9db9e94751a0f9c54b2533b7eeae4d8334732db3b42"
+  end
+  if Hardware::CPU.intel?
+    url "https://github.com/rollwagen/apoch/releases/download/0.0.12/apoch_0.0.12_darwin_amd64.tar.gz"
+    sha256 "30fd8a23674a78921be4e84135739ef1a1105675d739c026ba95d583d8a069e1"
 
-      def install
-        bin.install "apoch"
-        bash_completion.install "completions/apoch.bash" => "apoch"
-        zsh_completion.install "completions/apoch.zsh" => "_apoch"
-        fish_completion.install "completions/apoch.fish"
-      end
+    def install
+      bin.install "apoch"
+      bash_completion.install "completions/apoch.bash" => "apoch"
+      zsh_completion.install "completions/apoch.zsh" => "_apoch"
+      fish_completion.install "completions/apoch.fish"
     end
   end
 end
