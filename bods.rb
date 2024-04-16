@@ -5,13 +5,13 @@
 class Bods < Formula
   desc ""
   homepage ""
-  version "0.0.7"
+  version "0.0.8"
   license "MIT"
   depends_on :macos
 
-  if Hardware::CPU.arm?
-    url "https://github.com/rollwagen/bods/releases/download/0.0.7/bods_0.0.7_darwin_arm64.tar.gz"
-    sha256 "bd48abd4e25e9a040974543c47cf40080b8b49d723898c50c1c7080380dda1ff"
+  if Hardware::CPU.intel?
+    url "https://github.com/rollwagen/bods/releases/download/0.0.8/bods_0.0.8_darwin_amd64.tar.gz"
+    sha256 "a5472182e0a7ae7be700b1ec34ecd7bf1335deb3b52a8efd7c047eadc5699409"
 
     def install
       bin.install "bods"
@@ -20,9 +20,9 @@ class Bods < Formula
       fish_completion.install "completions/bods.fish"
     end
   end
-  if Hardware::CPU.intel?
-    url "https://github.com/rollwagen/bods/releases/download/0.0.7/bods_0.0.7_darwin_amd64.tar.gz"
-    sha256 "b03a0f1f31d69a2f7475db5cbaa6c58b484d13954e8a3b99ef27549419553c90"
+  if Hardware::CPU.arm?
+    url "https://github.com/rollwagen/bods/releases/download/0.0.8/bods_0.0.8_darwin_arm64.tar.gz"
+    sha256 "c3ae544a689362319abc02883464b18e5ef0c6e26a2a48af2db2c5283667d5b1"
 
     def install
       bin.install "bods"
