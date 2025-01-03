@@ -5,24 +5,24 @@
 class Ilconte < Formula
   desc ""
   homepage ""
-  version "0.0.1"
+  version "0.0.2"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/rollwagen/ilconte/releases/download/0.0.1/ilconte_0.0.1_darwin_amd64.tar.gz"
-    sha256 "5c52e64f6dbc2090ef1dacddbd304d0480aacc9243a53142f5a89423336849be"
+    url "https://github.com/rollwagen/ilconte/releases/download/0.0.2/ilconte_0.0.2_darwin_amd64.tar.gz"
+    sha256 "26c74b46629bdd39f22785e52195195ff7097f7ea619a9e0f2e62c2c21d177a0"
 
     def install
-      bin.install "bods"
+      bin.install "ilconte"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/rollwagen/ilconte/releases/download/0.0.1/ilconte_0.0.1_darwin_arm64.tar.gz"
-    sha256 "3b87e710f751dab6ac1eaa2bd75ca67b22b24adc623349dfdcf96ca08aabde1a"
+    url "https://github.com/rollwagen/ilconte/releases/download/0.0.2/ilconte_0.0.2_darwin_arm64.tar.gz"
+    sha256 "997e3e6c6ed54c0c26878fb8c9fdbf28ba61a626d196be9a0dc1e6a5df2a70d9"
 
     def install
-      bin.install "bods"
+      bin.install "ilconte"
     end
   end
 end
