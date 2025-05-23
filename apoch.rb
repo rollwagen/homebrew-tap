@@ -5,13 +5,13 @@
 class Apoch < Formula
   desc ""
   homepage ""
-  version "0.0.13"
+  version "0.0.14"
   license "Apache-2.0"
   depends_on :macos
 
-  on_intel do
-    url "https://github.com/rollwagen/apoch/releases/download/0.0.13/apoch_0.0.13_darwin_amd64.tar.gz"
-    sha256 "c750eee257d91e6f91a14da988e1e9c21ab31cde7886a1b3bdbbf79d32f02177"
+  if Hardware::CPU.intel?
+    url "https://github.com/rollwagen/apoch/releases/download/0.0.14/apoch_0.0.14_darwin_amd64.tar.gz"
+    sha256 "9db7a027dc10ab6d0cfa7ccc3f0fc9698769e069287ede1503dc60a3570e9685"
 
     def install
       bin.install "apoch"
@@ -20,9 +20,9 @@ class Apoch < Formula
       fish_completion.install "completions/apoch.fish"
     end
   end
-  on_arm do
-    url "https://github.com/rollwagen/apoch/releases/download/0.0.13/apoch_0.0.13_darwin_arm64.tar.gz"
-    sha256 "681e8b8b866053da7b9f4fa81146252e7dcaba010218e49b95e8a10fc99e05db"
+  if Hardware::CPU.arm?
+    url "https://github.com/rollwagen/apoch/releases/download/0.0.14/apoch_0.0.14_darwin_arm64.tar.gz"
+    sha256 "17c487a047eb42e1fe4756365b2d6ca24e9b897c91c2e781e38ff7c48fe70647"
 
     def install
       bin.install "apoch"
