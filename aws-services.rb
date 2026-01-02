@@ -5,13 +5,13 @@
 class AwsServices < Formula
   desc ""
   homepage ""
-  version "0.0.26"
+  version "0.0.27"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rollwagen/aws-services/releases/download/v0.0.26/aws-services_0.0.26_darwin_amd64.tar.gz"
-      sha256 "cf8482acf922af40afa639e1dc3d4ae7888e7604f113c6842f6dc2ee267b904d"
+      url "https://github.com/rollwagen/aws-services/releases/download/v0.0.27/aws-services_0.0.27_darwin_amd64.tar.gz"
+      sha256 "f007c5a1409affb2a72fb24aad811c4847c4531388f0baa9db12f457818bfe52"
 
       def install
         bin.install "aws-services"
@@ -21,8 +21,8 @@ class AwsServices < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rollwagen/aws-services/releases/download/v0.0.26/aws-services_0.0.26_darwin_arm64.tar.gz"
-      sha256 "9e042d3a96c9f2b406615049f6aef4662eb411d8fc65199d5856834807bcb646"
+      url "https://github.com/rollwagen/aws-services/releases/download/v0.0.27/aws-services_0.0.27_darwin_arm64.tar.gz"
+      sha256 "dbbe12678788a304e7a3f51a1b9ae9d67ddba9a188b4a036d783852edd49bd6b"
 
       def install
         bin.install "aws-services"
@@ -34,30 +34,24 @@ class AwsServices < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/rollwagen/aws-services/releases/download/v0.0.26/aws-services_0.0.26_linux_amd64.tar.gz"
-        sha256 "523c299303ed08080f402298af1ac422d4b5e39992444122c91db04775a1641d"
-
-        def install
-          bin.install "aws-services"
-          bash_completion.install "completions/aws-services.bash" => "aws-services"
-          zsh_completion.install "completions/aws-services.zsh" => "_aws-services"
-          fish_completion.install "completions/aws-services.fish"
-        end
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rollwagen/aws-services/releases/download/v0.0.27/aws-services_0.0.27_linux_amd64.tar.gz"
+      sha256 "05240bef4c425d60aed1c3caa393577df1ae28fc48387be907a1de975cfbb07a"
+      def install
+        bin.install "aws-services"
+        bash_completion.install "completions/aws-services.bash" => "aws-services"
+        zsh_completion.install "completions/aws-services.zsh" => "_aws-services"
+        fish_completion.install "completions/aws-services.fish"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/rollwagen/aws-services/releases/download/v0.0.26/aws-services_0.0.26_linux_arm64.tar.gz"
-        sha256 "b5a6da3a2f969377fe3f3173c8e73d167fd000b57421c8fd87472e0e4e97cfea"
-
-        def install
-          bin.install "aws-services"
-          bash_completion.install "completions/aws-services.bash" => "aws-services"
-          zsh_completion.install "completions/aws-services.zsh" => "_aws-services"
-          fish_completion.install "completions/aws-services.fish"
-        end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rollwagen/aws-services/releases/download/v0.0.27/aws-services_0.0.27_linux_arm64.tar.gz"
+      sha256 "85a3d90b00b610641c6cbd02e03fb3d5348b326a3252bfe4a709aac808ef1bf4"
+      def install
+        bin.install "aws-services"
+        bash_completion.install "completions/aws-services.bash" => "aws-services"
+        zsh_completion.install "completions/aws-services.zsh" => "_aws-services"
+        fish_completion.install "completions/aws-services.fish"
       end
     end
   end
