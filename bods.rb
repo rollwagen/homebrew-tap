@@ -5,13 +5,13 @@
 class Bods < Formula
   desc ""
   homepage ""
-  version "0.0.22"
+  version "0.0.23"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/rollwagen/bods/releases/download/0.0.22/bods_0.0.22_darwin_amd64.tar.gz"
-    sha256 "7ee1115452eee32cc29688cb1d5bc27c98580732417f194a0f5298bc8db25ed7"
+    url "https://github.com/rollwagen/bods/releases/download/0.0.23/bods_0.0.23_darwin_amd64.tar.gz"
+    sha256 "b33e208e7aea57a68120cf9989317282db1c0945304956e1b3200c027a15ede4"
 
     def install
       bin.install "bods"
@@ -21,8 +21,8 @@ class Bods < Formula
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/rollwagen/bods/releases/download/0.0.22/bods_0.0.22_darwin_arm64.tar.gz"
-    sha256 "c95f6661f2bd86bb410b6fe0c6ce7c3bcd7d41d60232c5b02e7922bfb819ec69"
+    url "https://github.com/rollwagen/bods/releases/download/0.0.23/bods_0.0.23_darwin_arm64.tar.gz"
+    sha256 "86add0329caf5d685c97bc59426a217c2329c13176149a1a3adc4b6bfd9a91f5"
 
     def install
       bin.install "bods"
