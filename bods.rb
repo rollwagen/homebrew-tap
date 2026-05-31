@@ -5,15 +5,15 @@
 class Bods < Formula
   desc ""
   homepage ""
-  version "0.0.26"
+  version "0.0.27"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/rollwagen/bods/releases/download/0.0.26/bods_0.0.26_darwin_amd64.tar.gz"
-    sha256 "6494ae17c00b6c222141e341c69596047fe8079c39b28e9896cd766773963683"
+    url "https://github.com/rollwagen/bods/releases/download/0.0.27/bods_0.0.27_darwin_amd64.tar.gz"
+    sha256 "b540b4e0470df2604bebcd9ec37235865b02d24ae428007686d03d506044adb4"
 
-    def install
+    define_method(:install) do
       bin.install "bods"
       bash_completion.install "completions/bods.bash" => "bods"
       zsh_completion.install "completions/bods.zsh" => "_bods"
@@ -21,10 +21,10 @@ class Bods < Formula
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/rollwagen/bods/releases/download/0.0.26/bods_0.0.26_darwin_arm64.tar.gz"
-    sha256 "69f50110d9cbf7964a726334e77f5be7aa113c2667b8f5705b0c1141fbf7a9a7"
+    url "https://github.com/rollwagen/bods/releases/download/0.0.27/bods_0.0.27_darwin_arm64.tar.gz"
+    sha256 "8f30d62209ada079a22a50b85b0ff4ef7af6d6338fd1d70b755a8e8f318fc3da"
 
-    def install
+    define_method(:install) do
       bin.install "bods"
       bash_completion.install "completions/bods.bash" => "bods"
       zsh_completion.install "completions/bods.zsh" => "_bods"
